@@ -4,7 +4,7 @@ use ExtUtils::MakeMaker;
 WriteMakefile
   (
    NAME        => 'Template::Plugin::VMethods',
-   VERSION     => '0.02',
+   VERSION     => '0.03',
    PL_FILES    => {},
    INSTALLDIRS => 'site',
    PREREQ_PM   => {

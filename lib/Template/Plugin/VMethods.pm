@@ -12,7 +12,7 @@ use Template::Plugin;
 use vars qw(@ISA $VERSION);
 @ISA = qw(Template::Plugin);
 
-$VERSION = "0.02";
+$VERSION = "0.03";
 
 use constant OPS => [qw{ LIST_OPS SCALAR_OPS HASH_OPS }];
 
@@ -124,8 +124,8 @@ references to those subroutines:
   package Template::Plugin::MD5VMethods;
   use base qw(Template::Plugin::VMethods);
   use Template::Plugin::MD5;
-  @SCALAR_OPS = qw(md5        => \&Template::Plugin::MD5::md5,
-                   md5_base64 => \&Template::Plugin::MD5::md5_base64);
+  @SCALAR_OPS = (md5        => \&Template::Plugin::MD5::md5,
+                 md5_base64 => \&Template::Plugin::MD5::md5_base64);
   1;
 
 This can get awfully tedious very soon when you're attempting to
